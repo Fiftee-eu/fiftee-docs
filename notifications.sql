@@ -125,21 +125,3 @@ COMMENT ON COLUMN notifications.user_communication_preferences.user_id IS 'Refer
 COMMENT ON COLUMN notifications.user_communication_preferences.template_id IS 'Reference to the communication template this preference applies to';
 
 COMMENT ON COLUMN notifications.user_communication_preferences.is_active IS 'Whether the user wants to receive notifications of this type';
-
--- migrate:down
-
-DROP TABLE notifications.user_communication_preferences;
-
-DROP TABLE notifications.communication_schedule_rules;
-
-DROP TABLE notifications.communication_templates_assets;
-
-DROP TABLE notifications.communication_templates;
-
-DROP TYPE notifications.delivery_type;
-
-DROP TYPE notifications.channel_type;
-
-DROP TABLE notifications.lanaguages;
-
-DROP SCHEMA notifications;
